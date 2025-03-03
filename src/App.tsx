@@ -85,3 +85,13 @@ const App: React.FC = () => (
 );
 
 export default App;
+
+// App.tsx
+import Service from './pages/Service';
+
+//code....
+
+<Route path="/service">
+      <Service />
+</Route>
+
