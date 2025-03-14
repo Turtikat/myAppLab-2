@@ -31,7 +31,7 @@ const Tab1: React.FC = () => {
         <IonContent className="ion-padding">
           <IonList>
             <IonListHeader>
-              <IonLabel>Navigate from here..</IonLabel>
+              <IonLabel>Navigointi</IonLabel>
             </IonListHeader>
             <IonMenuToggle autoHide>
               <IonItem button routerLink="/tab1">
