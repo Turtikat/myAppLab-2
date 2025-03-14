@@ -11,6 +11,7 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
 import { Redirect, Route } from 'react-router-dom';
+import Service from './pages/Service';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -31,17 +32,6 @@ import '@ionic/react/css/padding.css';
 import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
-
-/* import '@ionic/react/css/palettes/dark.always.css'; */
-/* import '@ionic/react/css/palettes/dark.class.css'; */
-import '@ionic/react/css/palettes/dark.system.css';
-
 /* Theme variables */
 import './theme/variables.css';
 
@@ -51,6 +41,7 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonTabs>
+        {/* Reitit sivuille */}
         <IonRouterOutlet>
           <Route exact path="/tab1">
             <Tab1 />
@@ -61,38 +52,34 @@ const App: React.FC = () => (
           <Route path="/tab3">
             <Tab3 />
           </Route>
+          <Route path="/service">
+            <Service />
+          </Route>
           <Route exact path="/">
             <Redirect to="/tab1" />
           </Route>
         </IonRouterOutlet>
+
+        {/* Navigaatiopalkki */}
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
             <IonIcon aria-hidden="true" icon={triangle} />
             <IonLabel>Koti</IonLabel>
           </IonTabButton>
+
           <IonTabButton tab="tab2" href="/tab2">
             <IonIcon aria-hidden="true" icon={ellipse} />
             <IonLabel>Ohjeet</IonLabel>
           </IonTabButton>
+
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon aria-hidden="true" icon={square} />
             <IonLabel>Yhteydenotto</IonLabel>
-            <Route exact path="/tab1">
-  <Tab1 />
-</Route>
-<Route exact path="/tab2">
-  <Tab2 />
-</Route>
-<Route path="/tab3">
-  <Tab3 />
-</Route>
-<Route path="/tarvitsetko-apua">
-  <Service />
-</Route>
-<Route exact path="/">
-  <Redirect to="/tab1" />
-</Route>
+          </IonTabButton>
 
+          <IonTabButton tab="service" href="/service">
+            <IonIcon aria-hidden="true" icon={square} />
+            <IonLabel>Tarvitsetko apua?</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
@@ -101,13 +88,3 @@ const App: React.FC = () => (
 );
 
 export default App;
-
-// App.tsx
-import Service from './pages/Service';
-
-//code....
-
-<Route path="/service">
-      <Service />
-</Route>
-
