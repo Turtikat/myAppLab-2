@@ -77,6 +77,22 @@ const App: React.FC = () => (
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon aria-hidden="true" icon={square} />
             <IonLabel>Yhteydenotto</IonLabel>
+            <Route exact path="/tab1">
+  <Tab1 />
+</Route>
+<Route exact path="/tab2">
+  <Tab2 />
+</Route>
+<Route path="/tab3">
+  <Tab3 />
+</Route>
+<Route path="/tarvitsetko-apua">
+  <Service />
+</Route>
+<Route exact path="/">
+  <Redirect to="/tab1" />
+</Route>
+
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
