@@ -25,7 +25,7 @@ const Tab1: React.FC = () => {
       <IonMenu contentId="main-content">
         <IonHeader>
           <IonToolbar>
-            <IonTitle>Menu</IonTitle>
+            <IonTitle>Valikko</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent className="ion-padding">
@@ -36,11 +36,11 @@ const Tab1: React.FC = () => {
             <IonMenuToggle autoHide>
               <IonItem button routerLink="/tab1">
                 <IonIcon slot="start" icon={homeOutline}></IonIcon>
-                <IonLabel>Home</IonLabel>
+                <IonLabel>Koti</IonLabel>
               </IonItem>
               <IonItem routerLink="/service">
                 <IonIcon slot="start" icon={apertureOutline}></IonIcon>
-                <IonLabel>Service</IonLabel>
+                <IonLabel>Tarvitsetko apua?</IonLabel>
               </IonItem>
             </IonMenuToggle>
           </IonList>
@@ -57,12 +57,12 @@ const Tab1: React.FC = () => {
                 </IonButton>
               </IonMenuToggle>
             </IonButtons>
-            <IonTitle>Header</IonTitle>
+            <IonTitle>MyLabbApp3</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent className="ion-padding">
-          <h1>Main Content</h1>
-          <p>Click the icon in the top left to toggle the Menu.</p>
+          <h1>Etusivu</h1>
+          <p>Klikkaa vasemmalla olevaa ikonia avataksesi valikon</p>
         </IonContent>
       </IonPage>
     </IonApp>
